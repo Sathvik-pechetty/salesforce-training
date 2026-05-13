@@ -1,156 +1,155 @@
-Salesforce Day 3 – Data Modeling
-1. Difference Between App, Object, Record, and Field
-Term	Meaning
-App	Collection of related tools and objects
-Object	Database table that stores data
-Record	Single row/data entry inside object
-Field	Single column/property in object
-Example
-Object:
+# 1. What is the difference between App, Object, Record, and Field?
 
-Student
+| Term   | Simple Meaning                          |
+| ------ | --------------------------------------- |
+| App    | Collection of related objects and tools |
+| Object | Table that stores data                  |
+| Record | One row of data inside object           |
+| Field  | One column/property inside object       |
 
-Fields:
-Student Name
-Age
-Email
-Record:
-Student Name	Age	Email
-Rahul	20	rahul@gmail.com
-2. Standard vs Custom Objects
-Standard Objects	Custom Objects
-Already provided by Salesforce	Created by users/developers
-Example: Account, Contact	Example: Student, Course
-Used for common CRM needs	Used for business-specific needs
-3. College Management System Data Model
+### Example:
 
-The task asks you to create these objects:
+* Object → Student
+* Fields → Name, Age, Email
+* Record → Rahul, 20, [rahul@gmail.com](mailto:rahul@gmail.com)
 
-Student
-Faculty
-Course
-Department
-Objects and Relationships
-Department Object
+---
 
-Fields:
+# 2. What is the difference between Standard and Custom Objects?
 
-Department Name
-HOD Name
-Faculty Object
+| Standard Objects                | Custom Objects                 |
+| ------------------------------- | ------------------------------ |
+| Already available in Salesforce | Created by users               |
+| Example: Account, Contact       | Example: Student, Course       |
+| Used for common CRM work        | Used for custom business needs |
 
-Fields:
+---
 
-Faculty Name
-Email
-Department (Lookup)
+# 3. Explain your College Management System Data Model.
 
-Relationship:
+### Objects:
 
-One Department → Many Faculty
-Course Object
+* Student
+* Faculty
+* Course
+* Department
 
-Fields:
+### Relationships:
 
-Course Name
-Course Code
-Total Seats
-Department (Lookup)
-Faculty (Lookup)
+* One Department has many Faculty
+* One Department has many Courses
+* One Faculty teaches many Courses
+* One Course has many Students
 
-Relationship:
+### Student Fields:
 
-One Faculty → Many Courses
-One Department → Many Courses
-Student Object
+* Student Name
+* Age
+* Email
+* Course
 
-Fields:
+### Faculty Fields:
 
-Student Name
-Age
-Email
-Course (Lookup)
+* Faculty Name
+* Email
+* Department
 
-Relationship:
+### Course Fields:
 
-One Course → Many Students
-Simple Relationship Diagram
-Department
-   |
-   |---- Faculty
-   |
-   |---- Course
-             |
-             |---- Student
-4. Formula Fields
+* Course Name
+* Course Code
+* Total Seats
 
-The PDF asks for 3 examples with explanation.
+### Department Fields:
 
-Formula Field 1: Full Name
+* Department Name
+* HOD Name
+
+---
+
+# 4. Give 3 Formula Fields with explanation.
+
+## Formula Field 1: Full Name
 
 Formula:
 
+```text id="dxb78u"
 First_Name + Last_Name
+```
 
-Why automatic?
+Why?
 
-Avoids manual typing
-Reduces mistakes
-Saves time
-Formula Field 2: Remaining Seats
+* Automatically combines names
+* Saves time
+* Reduces mistakes
+
+---
+
+## Formula Field 2: Remaining Seats
 
 Formula:
 
+```text id="t1n0yc"
 Total Seats - Enrolled Students
+```
 
-Why automatic?
+Why?
 
-Updates instantly
-Helps avoid overbooking
-Formula Field 3: Percentage
+* Updates automatically
+* Prevents overbooking
+
+---
+
+## Formula Field 3: Percentage
 
 Formula:
 
+```text id="5e3c2d"
 (Obtained Marks / Total Marks) * 100
-
-Why automatic?
-
-No manual calculation
-Faster report generation
-5. Validation Rules
-
-The PDF asks for 3 rules with explanation.
-
-Validation Rule 1: Email Cannot Be Empty
+```
 
 Why?
 
-Prevents missing communication data
-Validation Rule 2: Student Age Cannot Be Negative
+* Calculates marks automatically
+* Avoids manual calculation
+
+---
+
+# 5. Give 3 Validation Rules with explanation.
+
+## Validation Rule 1: Email Cannot Be Empty
 
 Why?
 
-Prevents invalid data entry
-Validation Rule 3: Course Seats Cannot Exceed Limit
+* Prevents missing contact information
+
+---
+
+## Validation Rule 2: Student Age Cannot Be Negative
 
 Why?
 
-Prevents system inconsistency
-Avoids admission errors
-6. Reflection: Why Structured Data Matters
+* Prevents invalid data entry
 
-Companies cannot rely only on spreadsheets because:
+---
 
-Data becomes duplicated
-Hard to maintain relationships
-Difficult to generate reports
-Multiple users create confusion
-Errors increase
-Security becomes difficult
+## Validation Rule 3: Course Seats Cannot Exceed Limit
 
-Structured enterprise systems help:
+Why?
 
-Maintain clean data
-Build relationships
-Automate processes
-Generate analytics and reports
+* Prevents admission errors
+* Maintains correct seat count
+
+---
+
+# 6. Why is structured data important?
+
+Structured data is important because:
+
+* It avoids duplicate data
+* Makes reports easier
+* Maintains relationships between data
+* Reduces errors
+* Helps companies manage large data easily
+
+Spreadsheets become difficult when many users and large amounts of data are involved.
