@@ -1,98 +1,55 @@
-1. What is Salesforce Platform?
+# 1. What is Salesforce Platform?
 
-Salesforce Platform is a cloud-based platform that helps businesses build CRM applications and manage customer data. It provides tools for automation, apps, objects, security, and development.
+Salesforce Platform is a cloud-based platform used to build CRM applications and manage customer data. It provides tools for automation, security, apps, and development.
 
-2. Explain App, Object, and Tab
-What is an App?
+---
 
-An App in Salesforce is a collection of tools, tabs, and objects designed for a specific business purpose.
+# 2. What is an App in Salesforce?
 
-Example:
+An App is a collection of related tools, tabs, and objects created for a specific business purpose. Examples include Sales App and Service App.
 
-Sales App
-Service App
-Hospital Management App
-##What is an Object?
+---
 
-An Object stores data in Salesforce, similar to a table in a database.
+# 3. What is an Object in Salesforce?
 
-Examples:
+An Object stores data in Salesforce like a table in a database. Examples are Account, Contact, Student, and Course.
 
-Account
-Contact
-Opportunity
-Student
-Patient
+---
 
-Objects contain records and fields.
+# 4. What is a Tab in Salesforce?
 
-##What is a Tab?
+A Tab helps users access objects and features in Salesforce. Examples include Accounts Tab and Reports Tab.
 
-A Tab is the user interface that helps users access objects and features.
+---
 
-Example:
+# 5. What is the difference between Configuration and Coding?
 
-Accounts Tab
-Contacts Tab
-Reports Tab
+Configuration uses clicks and settings without programming. Coding uses Apex programming language for complex business logic.
 
-Tabs help users navigate the system.
+Examples of configuration are creating validation rules and building workflows or flows
 
-3. Configuration vs Coding
-Configuration (No Code)	Coding (Apex)
-Uses clicks and settings	Uses programming
-Faster and easier	More flexible
-Used for simple automation	Used for complex logic
-Configuration Examples
-Creating validation rules
-Building flows/workflows
-Coding Examples
-Custom business logic using Apex
-API integrations with external systems
-4. Connect CRM Concepts with Salesforce Platform
+Examples of coding are creating custom business logic using Apex and integrating external systems using APIs.
 
-CRM concepts like Account, Contact, and Opportunity are represented as Objects in Salesforce.
+---
 
-Account → Company information
-Contact → Customer information
-Opportunity → Sales deal information
+# 6. How do CRM concepts fit into Salesforce Platform?
 
-These objects are grouped inside Apps and accessed using Tabs.
+CRM concepts like Account, Contact, and Opportunity are stored as objects in Salesforce. These objects are grouped inside apps and accessed using tabs.
 
-5. Multi-Tenant Architecture
+---
 
-Salesforce uses multi-tenant architecture, meaning many customers share the same infrastructure while keeping their data secure and separate.
+# 7. What is Multi-Tenant Architecture?
 
-Benefits:
+Multi-tenant architecture means many customers share the same Salesforce infrastructure while keeping their data secure and separate.
 
-Low maintenance
-Automatic updates
-Scalability
-6. How Developers Extend Salesforce
+---
 
-Developers extend Salesforce using:
+# 8. How do developers extend Salesforce functionality?
 
-Apex
-Lightning Components
-APIs
-Integrations
-Custom Objects
-7. System Design Example
+Developers extend Salesforce using Apex, Lightning Components, APIs, integrations, and custom objects.
 
-You can choose college, hospital, library, etc.
+---
 
-Example:
+# 9. Explain your System Design Example.
 
-App Name
-
-College Management App
-
-Objects
-Student
-Teacher
-Course
-Attendance
-User Interaction
-Students view courses
-Teachers mark attendance
-Admin manages records
+The system design example is a College Management App. It contains objects like Student, Teacher, Course, and Attendance. Students can view courses, teachers can mark attendance, and admins manage records.
