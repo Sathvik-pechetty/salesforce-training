@@ -12,7 +12,7 @@ Example:
 Sales App
 Service App
 Hospital Management App
-What is an Object?
+##What is an Object?
 
 An Object stores data in Salesforce, similar to a table in a database.
 
@@ -26,7 +26,7 @@ Patient
 
 Objects contain records and fields.
 
-What is a Tab?
+##What is a Tab?
 
 A Tab is the user interface that helps users access objects and features.
 
