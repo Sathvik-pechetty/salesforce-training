@@ -1,3 +1,4 @@
+##DAY 2 platform-basics
 # 1. What is Salesforce Platform?
 
 Salesforce Platform is a cloud-based platform used to build CRM applications and manage customer data. It provides tools for automation, security, apps, and development.
